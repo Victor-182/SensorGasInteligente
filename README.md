@@ -10,4 +10,4 @@ Modelo do projeto construído na plataforma tinkercad contendo
  - Sensor de gás MQ-2
  - Buzzer (Atuador)
 
-![Projeto TinkerCad](https://github.com/Victor-182/SensorGasInteligente/blob/master/image.jpg?raw=true)
+![Projeto TinkerCad](https://github.com/Victor-182/SensorGasInteligente/blob/master/ProjetoArduinoTinkercad.jpg?raw=true)
