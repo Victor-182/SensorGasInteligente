@@ -1,15 +1,12 @@
 # Sensor de Gás Inteligente
 
-  Projeto destinado a implementação de um sensor de gás inteligente, utilizando o microcontrolador Arduino UNO R3 e a comunicação com a internet via o protocolo MQTT.
+  Projeto destinado a implementação de um sensor de gás inteligente, utilizando o microcontrolador NodeMcu ESP8266 e a comunicação com a internet com o protocolo MQTT.
 	
-  O equipamento visa ser um facilitador para a segurança e bem-estar do indivíduo, seja em seu cotidiano ou no meio de trabalho. Ele é composto por um sensor de gás e fumaça MQ-2, o qual pode detectar diversos tipos de gases e fumaça no ar, tendo capacidade de detecção que vai de 300 a 10.000ppm (partes por milhão), onde, é atribuído um valor máximo para representação do nível normal de gás no ambiente, e caso esse valor seja excedido, o Buzzer (atuador) será ativado, e um LED irá piscar, informando, de forma audiovisual, para quem estiver no ambiente, que está havendo um vazamento de gás, todo esse processo é controlado por intermédio do microcontroladro Arduino UNO R3.
+  O equipamento visa ser um facilitador para a segurança e bem-estar do indivíduo, seja em seu cotidiano ou no meio de trabalho. Ele é composto por um sensor de gás e fumaça MQ-2, o qual pode detectar diversos tipos de gases e fumaça no ar, tendo capacidade de detecção que vai de 200 a 10.000ppm (partes por milhão), onde, é atribuído um valor máximo para representação do nível normal de gás no ambiente, e caso esse valor seja excedido, o Buzzer (atuador) será ativado, e um LED irá acender, informando, de forma audiovisual, para quem estiver no ambiente, que está havendo um vazamento de gás, todo esse processo é controlado por intermédio do microcontroladro Node Mcu ESP8266.
   
-  A leitura dos dados é feita através do sensor, onde essas informações, são armazenadas em uma variável, que será lida por uma estrutura condicional, onde será verificado se esse número que está sendo armazenado na variável ultrapassa ou não o valor imposto pelo usuário, caso ultrapasse, o atuador Buzzer será acionado, emitindo uma frequência que também poderá determinada pelo usuário e um LED vermelho irá começar a piscar, e caso o nível de gás do ambiente diminua, o LED irá parar de piscar e o Buzzer irá parar de tocar, logo, temos o LED, que servirá como um indicador visual e o Buzzer que servirá como um indicador sonoro.
+# Montagem e lógica por trás do funcionamento
 
-Modelo do projeto construído na plataforma tinkercad contendo:
-
- - Arduino UNO R3 (Microcontrolador) 
- - Sensor de gás MQ-2
- - Buzzer (Atuador)
-
-![Projeto TinkerCad](https://github.com/Victor-182/SensorGasInteligente/blob/master/ProjetoArduinoTinkercad.jpg?raw=true)
+  A leitura dos dados é feita através do sensor, sendo este conectado a uma porta analógica, onde essas informações, são armazenadas em uma variável, a qual é processada para ser concatenada a um payload que irá ser utilizado e enviado junto a um tópico, e que através do método publish será enviada utilizando o protocolo MQTT, esta também será lida por uma estrutura condicional, e de forma constante, será verificado se esse número que foi armazenado ultrapassa ou não o valor imposto no cógido, caso ultrapasse, o atuador Buzzer será acionado, o qual está conectado a uma porta digital, emitindo uma frequência parecida com a de um alarme, um LED vermelho, que também está conectado a uma porta digital, irá se acender e por último realizado um publish, enviando um payload contendo a mensagem de alerta sobre o vazamento de gás para o usuário, caso o nível de gás do ambiente diminua, o LED irá se apagar, o Buzzer irá parar de tocar, e será realizado outro publish com o payload contendo uma mensagem sobre a normalização do nível de gás no ambiente, com isso temos o LED, que servirá como um indicador visual e o Buzzer que servirá como um indicador sonoro, além da comunicação com o usuário via internet utilizando o protocolo MQTT.
+  Para comunicação utilizando MQTT e a transmissão de informações pela rede através do WiFi foram utilizadas as bibliotecas ESP8266WiFi e PubSubClient, as quais possuem os métodos e classes para estabelecer a conexão com a internet e a conexão com o protocolo MQTT e uso de seus métodos de publish e subscribe, respectivamente
+  Toda a relação do hardware utilizado pode ser
+	  
