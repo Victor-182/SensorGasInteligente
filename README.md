@@ -11,12 +11,12 @@
 
 # Relação do Hardware utilizado
 
- Toda relação do Hardware utilizado pode ser acessada através da página WiKi <link página Wiki>, ou também através do documento em PDF disponível no repostiório <link PDF>
+ Toda relação do Hardware utilizado pode ser acessada através da página WiKi [Relação do Hardware Utilizado](https://github.com/Victor-182/SensorGasInteligente/wiki/Rela%C3%A7%C3%A3o-do-Hardware-utilizado), ou também através do documento em PDF disponível no repostiório [PDF Relação do Hardware utilizado](https://github.com/Victor-182/SensorGasInteligente/blob/master/Rela%C3%A7%C3%A3o%20do%20Hardware%20utilizado.pdf)
 	  
 # Protocolos, interfaces e módulos de comunicação
 
- Para esses componentes também foi criada uma página WiKi, acessível através do link <link página Wiki>, ou pelo arquivo em PDF presente no repositório
+ Para esses componentes também foi criada uma página WiKi, acessível através do link [Protocolos, interfaces e módulos de comunicação](https://github.com/Victor-182/SensorGasInteligente/wiki/Protocolos,-Interfaces-e-M%C3%B3dulos-de-Comunica%C3%A7%C3%A3o), ou pelo arquivo em PDF presente no repositório [PDF Protocolos, interfaces e módulos de comunicação](https://github.com/Victor-182/SensorGasInteligente/blob/master/Protocolos%2C%20Interfaces%20e%20M%C3%B3dulos%20de%20Comunica%C3%A7%C3%A3o.pdf)
  
 # Documentação do código
 
- A documentação do código se encontra em PDF no repositório, no formato PDF, disponível para download <link PDF>
+ A documentação do código se encontra em PDF no repositório, no formato PDF, disponível para download [Documentação do Software desenvolvido](https://github.com/Victor-182/SensorGasInteligente/blob/master/Documenta%C3%A7%C3%A3o%20do%20Software%20IoT.pdf)
