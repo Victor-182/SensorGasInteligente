@@ -9,7 +9,14 @@
   A leitura dos dados é feita através do sensor, sendo este conectado a uma porta analógica, onde essas informações, são armazenadas em uma variável, a qual é processada para ser concatenada a um payload que irá ser utilizado e enviado junto a um tópico, e que através do método publish será enviada utilizando o protocolo MQTT, esta também será lida por uma estrutura condicional, e de forma constante, será verificado se esse número que foi armazenado ultrapassa ou não o valor imposto no cógido, caso ultrapasse, o atuador Buzzer será acionado, o qual está conectado a uma porta digital, emitindo uma frequência parecida com a de um alarme, um LED vermelho, que também está conectado a uma porta digital, irá se acender e por último realizado um publish, enviando um payload contendo a mensagem de alerta sobre o vazamento de gás para o usuário, caso o nível de gás do ambiente diminua, o LED irá se apagar, o Buzzer irá parar de tocar, e será realizado outro publish com o payload contendo uma mensagem sobre a normalização do nível de gás no ambiente, com isso temos o LED, que servirá como um indicador visual e o Buzzer que servirá como um indicador sonoro, além da comunicação com o usuário via internet utilizando o protocolo MQTT.
   Para comunicação utilizando MQTT e a transmissão de informações pela rede através do WiFi foram utilizadas as bibliotecas ESP8266WiFi e PubSubClient, as quais possuem os métodos e classes para estabelecer a conexão com a internet e a conexão com o protocolo MQTT e uso de seus métodos de publish e subscribe, respectivamente
 
-#Relação do Hardware utilizado
+# Relação do Hardware utilizado
 
- Toda relação do Hardware utilizado pode ser acessada através da página WiKi, ou também através do documento em PDF disponível no repostiório
+ Toda relação do Hardware utilizado pode ser acessada através da página WiKi <link página Wiki>, ou também através do documento em PDF disponível no repostiório <link PDF>
 	  
+# Protocolos, interfaces e módulos de comunicação
+
+ Para esses componentes também foi criada uma página WiKi, acessível através do link <link página Wiki>, ou pelo arquivo em PDF presente no repositório
+ 
+# Documentação do código
+
+ A documentação do código se encontra em PDF no repositório, no formato PDF, disponível para download <link PDF>
